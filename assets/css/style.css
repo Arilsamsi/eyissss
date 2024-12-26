@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #ffccdd);
+    /* background-color: #ffccdd; */
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ff99cc;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+header:hover {
+    background-color: #ff6699;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ff99cc;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.nav-links a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ff6699;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffccdd;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 0.5s forwards ease-in-out;
+}
+
+.about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.about img:hover {
+    transform: scale(1.1);
+}
+
+.about h1 {
+    font-size: 2.5em;
+    color: #cc0052;
+}
+
+.about p {
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+.contact {
+    background-color: #ffccdd;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 0.7s forwards ease-in-out;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    color: #cc0052;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #ff6699;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #cc0052;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #ff99cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-media{
+    padding-top: 12px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff6699;
+}
+.social-media a:hover{
+    text-decoration: underline;
+    color: #ff6699;
+}
+a{
+    color: #cc0052;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links a {
+        padding: 0 15px;
+    }
+}
